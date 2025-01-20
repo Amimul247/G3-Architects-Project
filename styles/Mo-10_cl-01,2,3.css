@@ -5,7 +5,6 @@
   font-optical-sizing: auto;
   font-weight: 400px;
   font-style: normal;
-  background-color: rgb(255, 244, 231)
 }
 
 /* Shared Styles */
@@ -110,12 +109,13 @@ main > section{
 .teams{
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 73px;
 }
 
 .team-img-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .our-features{
@@ -123,11 +123,153 @@ main > section{
   max-width: 530px;
 }
 
-
+.feature-description{
+  margin-bottom: 32px;
+}
 
 .quick-list{
   font-weight: 500;
 }
+
+
+
+/* Features you will love & enjoy */
+.features{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.features-div{
+  height: 171px;
+  width: 586px;
+}
+
+.features-title{
+  border-left: 8px solid #ff900e;
+  padding: 10px 92px 24px 26px;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.features-div{
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+}
+
+.features-heading{
+  font-weight: 600px;
+  font-size: 20px;
+  margin-top: 1px;
+}
+
+.features-description{
+  font-size: 16px;
+  color: #727272;
+}
+
+
+.features-body{
+  height: 982px;
+  width: 586px;
+}
+
+.features-image{
+  height: 982px;
+  width: 708px;
+}
+
+
+
+
+
+
+
+/* some facts related styles */
+.facts-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.facts-container{
+  justify-items: center;
+  }
+
+.fact-card{
+  border: 1px solid #ff900e;
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.fact-number{
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.fact-name{
+  font-size: 1.25rem;
+  font-weight: 600px;
+  margin-top: 0px;
+  margin-block-start: 0.07em;
+
+}
+
+.fact-description{
+  max-width: 540px;
+}
+
+
+
+
+/* sponspors-logo-container-styles */
+.sponspors-content{
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.sponspors-title{
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.sponspors-logo-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.sponspors-logo{
+  filter: grayscale(100%);
+}
+
+
+/* footer related styles */
+footer{
+  justify-content: center;
+  margin-top: 180px;
+  margin-bottom: 240px;
+}
+
+.footer-container{
+  background-color: rgba(255, 144, 14, 0.1);
+  height: 100px;
+  width: 1440px;
+  justify-items: center;
+  align-content: center;
+}
+
+
+
+
+
+
 
 
 /* responsiv media query */
@@ -138,9 +280,26 @@ main > section{
   .teams{
     flex-direction: column;
   }
+  .sponspors-logo-container{
+    flex-direction: column;
+  }
 
-  .team-img-container{
+  .team-img-container,
+  .facts-container,
+  .sponspors-logo-container{
     grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  .team-img-container,
+  .facts-container{
+    justify-items: center;
+    gap: 24px;
+    }
+
+  .sponspors-logo-container{
+    justify-items: center;
+    gap: 50px;
   }
 
   .our-features{
@@ -157,5 +316,25 @@ main > section{
   }
   .our-features{
     margin: 50px auto;
+  }
+
+  .team-img-container,
+  .facts-container,
+  .sponspors-logo-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facts-container,
+  .sponspors-logo-container{
+    justify-content: space-between;
+    justify-items: center;
+  }
+  .facts-container,
+  .teams{
+    gap: 24px;
+  }
+
+  .sponspors-logo-container{
+    gap: 50px;
   }
 }
